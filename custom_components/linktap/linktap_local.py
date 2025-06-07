@@ -52,7 +52,8 @@ class LinktapLocal:
     async def _request(self, data):
 
         headers = {
-          "content-type": "application/json; charset=UTF-8"
+          "content-type": "application/json; charset=UTF-8",
+          "Connection": "close"
         }
 
         url = "http://" + self.ip + "/api.shtml"
